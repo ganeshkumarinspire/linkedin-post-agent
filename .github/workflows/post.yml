@@ -12,6 +12,10 @@ on:
         description: 'Which series to post? (agile_journey or data_agile)'
         required: true
         default: 'agile_journey'
+      dry_run:
+        description: 'Dry run? (true = verify only, do NOT post to LinkedIn)'
+        required: false
+        default: 'false'
 
 jobs:
   post:
@@ -51,6 +55,7 @@ jobs:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
         run: python agent.py
 
       - name: Post Data-Driven Agile (12 PM)
@@ -61,6 +66,7 @@ jobs:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
         run: python agent_data_agile.py
 
       - name: Commit report back to repo

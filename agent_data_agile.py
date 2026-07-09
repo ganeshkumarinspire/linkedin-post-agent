@@ -137,6 +137,20 @@ def run_agent():
         )
         return
 
+    # Skip publish if dry run
+    import os
+    if os.getenv("DRY_RUN", "false").lower() == "true":
+        logger.info("DRY RUN — skipping LinkedIn publish. Verification passed.")
+        log_report(
+            series="Data-Driven Agile",
+            folder="Data_Driven_Agile",
+            image_file=image_path.name if image_path else None,
+            post_date=today_str,
+            json_post_matched=json_verified,
+            status="Dry Run — verified OK, not posted",
+        )
+        return
+
     logger.info("Publishing to LinkedIn...")
     try:
         post_urn = publish(post_text, image_path=str(image_path) if image_path else None)

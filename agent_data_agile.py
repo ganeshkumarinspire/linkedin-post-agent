@@ -107,13 +107,16 @@ def run_agent():
         post_text = pre_written[today_str]
         logger.info(f"Using pre-written post for {today_str}")
     else:
-        logger.info("No pre-written post found — generating with Ollama...")
-        image_description = None
-        if image_path:
-            logger.info(f"Analysing image with llava...")
-            image_description = describe_image(image_path)
-            logger.info(f"Image description: {image_description}")
-        post_text = generate_post_custom(topic, SYSTEM_PROMPT, FIXED_HASHTAGS, image_description)
+        logger.info(f"No pre-written post found for {today_str} — skipping today.")
+        log_report(
+            series="Data-Driven Agile",
+            folder="Data_Driven_Agile",
+            image_file=image_path.name if image_path else None,
+            post_date=today_str,
+            json_post_matched=False,
+            status="Skipped — no post scheduled for today",
+        )
+        return
     logger.info(f"Post:\n{post_text}")
 
     # Verify post matches image before publishing

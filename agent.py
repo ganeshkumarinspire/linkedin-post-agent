@@ -15,6 +15,7 @@ load_dotenv()
 from content_generator import describe_image, generate_post, get_today_image
 from linkedin_client import publish
 from report_logger import log_report
+from content_verifier import verify_post_matches_image
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -90,7 +91,28 @@ def run_agent() -> None:
         post_text = generate_post(topic, image_description=image_description)
     logger.info(f"Post text:\n{post_text}")
 
-    # 3. Publish to LinkedIn (with image if available)
+    # 3. Verify post matches image before publishing
+    if image_path:
+        logger.info("Verifying post matches image content via GPT-4o...")
+        is_match, reason = verify_post_matches_image(image_path, post_text)
+        logger.info(f"Verification result: {'MATCH' if is_match else 'NO MATCH'} — {reason}")
+    else:
+        is_match, reason = True, "No image — skipping visual verification"
+
+    if not is_match:
+        logger.error(f"Post blocked — content does not match image: {reason}")
+        log_report(
+            series="Lessons from My Agile Journey",
+            folder="Lessons_from_My_Agile_Journey",
+            image_file=image_path.name if image_path else None,
+            post_date=today_str,
+            json_post_matched=False,
+            status="Blocked — content mismatch",
+            error=reason,
+        )
+        return
+
+    # 4. Publish to LinkedIn
     logger.info("Publishing to LinkedIn...")
     try:
         post_urn = publish(post_text, image_path=str(image_path) if image_path else None)

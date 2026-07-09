@@ -50,6 +50,7 @@ jobs:
           LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python agent.py
 
       - name: Post Data-Driven Agile (12 PM)
@@ -59,6 +60,7 @@ jobs:
           LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python agent_data_agile.py
 
       - name: Commit report back to repo

@@ -1,0 +1,60 @@
+name: LinkedIn Auto Post
+
+on:
+  schedule:
+    # 8 AM Paris time = 6 AM UTC (summer CEST = UTC+2)
+    - cron: '0 6 * * 1-5'
+    # 12 PM Paris time = 10 AM UTC (summer CEST = UTC+2)
+    - cron: '0 10 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      series:
+        description: 'Which series to post? (agile_journey or data_agile)'
+        required: true
+        default: 'agile_journey'
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests python-dotenv Pillow
+
+      - name: Determine which series to post
+        id: series
+        run: |
+          HOUR=$(date -u +%H)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "agent=${{ github.event.inputs.series }}" >> $GITHUB_OUTPUT
+          elif [ "$HOUR" = "06" ]; then
+            echo "agent=agile_journey" >> $GITHUB_OUTPUT
+          else
+            echo "agent=data_agile" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Post Agile Journey (8 AM)
+        if: steps.series.outputs.agent == 'agile_journey'
+        env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+        run: python agent.py
+
+      - name: Post Data-Driven Agile (12 PM)
+        if: steps.series.outputs.agent == 'data_agile'
+        env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+        run: python agent_data_agile.py

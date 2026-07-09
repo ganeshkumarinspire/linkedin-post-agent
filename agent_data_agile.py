@@ -82,25 +82,34 @@ def run_agent():
 
     # Check for today's image
     IMAGES_DIR.mkdir(exist_ok=True)
-    image_path = get_image_for_date(IMAGES_DIR)
-
-    # Use pre-written post if available, otherwise generate with Ollama
     from datetime import date
     today_str = date.today().isoformat()
 
+    image_path = get_image_for_date(IMAGES_DIR)
+    image_found = image_path is not None
+    if image_found:
+        logger.info(f"Image found: {image_path.name}")
+    else:
+        logger.info("No image found for today")
+
+    # Check for pre-written post
     pre_written = {}
     if POSTS_FILE.exists():
         with open(POSTS_FILE) as f:
             pre_written = json.load(f)
 
-    if today_str in pre_written:
+    json_post_found = today_str in pre_written
+    json_verified = image_found and json_post_found
+    logger.info(f"Image found: {image_found} | JSON post found: {json_post_found} | Verified: {json_verified}")
+
+    if json_post_found:
         post_text = pre_written[today_str]
         logger.info(f"Using pre-written post for {today_str}")
     else:
         logger.info("No pre-written post found — generating with Ollama...")
         image_description = None
         if image_path:
-            logger.info(f"Image found: {image_path.name} — analysing...")
+            logger.info(f"Analysing image with llava...")
             image_description = describe_image(image_path)
             logger.info(f"Image description: {image_description}")
         post_text = generate_post_custom(topic, SYSTEM_PROMPT, FIXED_HASHTAGS, image_description)
@@ -114,7 +123,7 @@ def run_agent():
             folder="Data_Driven_Agile",
             image_file=image_path.name if image_path else None,
             post_date=today_str,
-            json_post_matched=today_str in pre_written,
+            json_post_matched=json_verified,
             status="Success",
         )
         logger.info(f"Done! Post published: {post_urn}")
@@ -124,7 +133,7 @@ def run_agent():
             folder="Data_Driven_Agile",
             image_file=image_path.name if image_path else None,
             post_date=today_str,
-            json_post_matched=today_str in pre_written,
+            json_post_matched=json_verified,
             status="Failed",
             error=str(e),
         )

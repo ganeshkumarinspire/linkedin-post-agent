@@ -57,17 +57,8 @@ def run_agent() -> None:
 
     # 1. Check for today's image
     image_path = get_today_image()
-    image_description = None
-
-    if image_path:
-        logger.info(f"Image found: {image_path.name} — analysing with llava...")
-        image_description = describe_image(image_path)
-        logger.info(f"Image description: {image_description}")
-    else:
-        logger.info("No image for today — text-only post")
 
     # 2. Use pre-written post if available, otherwise generate with Ollama
-    today = str(Path(__file__).parent / "x")[:-1]  # unused, just for import
     from datetime import date
     today_str = date.today().isoformat()
 
@@ -81,6 +72,11 @@ def run_agent() -> None:
         logger.info(f"Using pre-written post for {today_str}")
     else:
         logger.info("No pre-written post found — generating with Ollama (llama3.2)...")
+        image_description = None
+        if image_path:
+            logger.info(f"Image found: {image_path.name} — analysing with llava...")
+            image_description = describe_image(image_path)
+            logger.info(f"Image description: {image_description}")
         post_text = generate_post(topic, image_description=image_description)
     logger.info(f"Post text:\n{post_text}")
 

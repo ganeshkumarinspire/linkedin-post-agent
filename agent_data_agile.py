@@ -79,17 +79,9 @@ def run_agent():
     topic = topics[idx]
     logger.info(f"Selected topic [{idx}]: {topic['title']}")
 
-    # Check for today's image in images_data_agile/
+    # Check for today's image
     IMAGES_DIR.mkdir(exist_ok=True)
     image_path = get_image_for_date(IMAGES_DIR)
-    image_description = None
-
-    if image_path:
-        logger.info(f"Image found: {image_path.name} — analysing...")
-        image_description = describe_image(image_path)
-        logger.info(f"Image description: {image_description}")
-    else:
-        logger.info("No image for today — text-only post")
 
     # Use pre-written post if available, otherwise generate with Ollama
     from datetime import date
@@ -105,6 +97,11 @@ def run_agent():
         logger.info(f"Using pre-written post for {today_str}")
     else:
         logger.info("No pre-written post found — generating with Ollama...")
+        image_description = None
+        if image_path:
+            logger.info(f"Image found: {image_path.name} — analysing...")
+            image_description = describe_image(image_path)
+            logger.info(f"Image description: {image_description}")
         post_text = generate_post_custom(topic, SYSTEM_PROMPT, FIXED_HASHTAGS, image_description)
     logger.info(f"Post:\n{post_text}")
 

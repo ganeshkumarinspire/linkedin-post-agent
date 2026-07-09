@@ -1,0 +1,5 @@
+.env
+__pycache__/
+*.pyc
+progress.json
+progress_data_agile.json

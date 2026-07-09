@@ -1,0 +1,62 @@
+{
+  "next_index": 10,
+  "published": [
+    {
+      "topic_id": 1,
+      "title": "Why Velocity Is a Vanity Metric",
+      "post_urn": "urn:li:share:7477850484389756928"
+    },
+    {
+      "topic_id": 2,
+      "title": "What Makes a Great Scrum Master (It's Not Facilitation)",
+      "post_urn": "urn:li:share:7477967971198525440"
+    },
+    {
+      "topic_id": 3,
+      "title": "How I Helped a Team Go From Chaos to Predictable Delivery",
+      "post_urn": "urn:li:share:7477968959397376001"
+    },
+    {
+      "topic_id": 4,
+      "title": "The Difference Between a Scrum Master and a Project Manager",
+      "post_urn": "urn:li:share:7478044352825495552",
+      "image": "2026-07-01.png"
+    },
+    {
+      "topic_id": 5,
+      "title": "3 Signs Your Team Needs a Scrum Master Right Now",
+      "post_urn": "urn:li:share:7478333119918694402",
+      "image": "2026-07-02.png"
+    },
+    {
+      "topic_id": 6,
+      "title": "How I Removed Blockers That Had Been Sitting for 3 Weeks",
+      "post_urn": "urn:li:share:7478725048581722113",
+      "image": "2026-07-03.png"
+    },
+    {
+      "topic_id": 7,
+      "title": "Working as a Scrum Master in France: What I've Learned",
+      "post_urn": "urn:li:share:7478727360159301632",
+      "image": "2026-07-03.png"
+    },
+    {
+      "topic_id": 8,
+      "title": "Why I'm Actively Looking for My Next Scrum Master Role in Europe",
+      "post_urn": "urn:li:share:7479828745143570432",
+      "image": "2026-07-06.png"
+    },
+    {
+      "topic_id": 9,
+      "title": "How Psychological Safety Unlocked My Team's Performance",
+      "post_urn": "urn:li:share:7479829615440658432",
+      "image": "2026-07-06.png"
+    },
+    {
+      "topic_id": 10,
+      "title": "Retrospectives That Actually Change Team Behavior",
+      "post_urn": "urn:li:share:7480532967161933824",
+      "image": "2026-07-08.png"
+    }
+  ]
+}

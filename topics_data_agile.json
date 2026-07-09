@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "title": "Why Agile Teams That Ignore Data Stay Stuck",
+    "theme": "Data-driven mindset",
+    "hook": "Gut feeling ran our retrospectives for months. Then I put numbers on the wall. Everything changed.",
+    "tags": ["DataDrivenAgile", "ScrumMaster", "AgileMindset"]
+  },
+  {
+    "id": 2,
+    "title": "The 3 Metrics Every Scrum Master Should Track",
+    "theme": "Core Agile metrics",
+    "hook": "Velocity. Cycle time. Defect escape rate. Most teams track one. The best track all three.",
+    "tags": ["DataDrivenAgile", "ScrumMaster", "AgileDelivery"]
+  },
+  {
+    "id": 3,
+    "title": "How I Used Jira Data to Fix a Broken Sprint Planning",
+    "theme": "Jira analytics",
+    "hook": "Sprint after sprint we over-committed. The data told us exactly why — we just weren't looking.",
+    "tags": ["DataDrivenAgile", "Jira", "ScrumMaster"]
+  },
+  {
+    "id": 4,
+    "title": "Burndown Charts Lie — Here's What to Look For Instead",
+    "theme": "Burndown analysis",
+    "hook": "A perfect burndown chart can hide a team in crisis. I learned this the hard way.",
+    "tags": ["DataDrivenAgile", "AgileMetrics", "ScrumMaster"]
+  },
+  {
+    "id": 5,
+    "title": "Cycle Time vs Lead Time: Why Most Teams Confuse Them",
+    "theme": "Flow metrics",
+    "hook": "I asked 10 Scrum Masters to define cycle time. I got 10 different answers.",
+    "tags": ["DataDrivenAgile", "CycleTime", "AgileDelivery"]
+  },
+  {
+    "id": 6,
+    "title": "How a Single Dashboard Transformed Our Sprint Reviews",
+    "theme": "Data visualisation",
+    "hook": "Our sprint reviews were opinion battles. One dashboard ended the debate.",
+    "tags": ["DataDrivenAgile", "ScrumMaster", "ContinuousImprovement"]
+  },
+  {
+    "id": 7,
+    "title": "Using Azure DevOps Analytics to Coach Your Team",
+    "theme": "Azure DevOps",
+    "hook": "Azure DevOps has more coaching insights than most Scrum Masters realise. I barely scratched the surface for two years.",
+    "tags": ["DataDrivenAgile", "AzureDevOps", "ScrumMaster"]
+  },
+  {
+    "id": 8,
+    "title": "What Defect Rates Tell You About Team Culture",
+    "theme": "Quality metrics",
+    "hook": "High defect rates are never just a QA problem. They are a team communication problem.",
+    "tags": ["DataDrivenAgile", "QualityAssurance", "TeamCollaboration"]
+  },
+  {
+    "id": 9,
+    "title": "How I Predicted a Sprint Failure 3 Days In",
+    "theme": "Early warning signals",
+    "hook": "By day 3 the data was screaming. Nobody wanted to hear it. By day 10, nobody could ignore it.",
+    "tags": ["DataDrivenAgile", "ScrumMaster", "AgileDelivery"]
+  },
+  {
+    "id": 10,
+    "title": "The Problem With Velocity as Your Only Metric",
+    "theme": "Velocity misconceptions",
+    "hook": "Velocity tells you how fast you ran. It doesn't tell you if you ran in the right direction.",
+    "tags": ["DataDrivenAgile", "AgileMetrics", "ScrumMaster"]
+  },
+  {
+    "id": 11,
+    "title": "Data-Driven Retrospectives: From Opinions to Actions",
+    "theme": "Retrospective analytics",
+    "hook": "Retros without data are just feelings shared in a circle. Data turns feelings into facts.",
+    "tags": ["DataDrivenAgile", "Retrospective", "ContinuousImprovement"]
+  },
+  {
+    "id": 12,
+    "title": "How I Used Flow Efficiency to Expose Hidden Blockers",
+    "theme": "Flow efficiency",
+    "hook": "Our team looked busy. Flow efficiency said 23%. Most of the time work was just waiting.",
+    "tags": ["DataDrivenAgile", "Kanban", "ScrumMaster"]
+  },
+  {
+    "id": 13,
+    "title": "Combining Data Engineering Skills With Agile Coaching",
+    "theme": "Data Engineering meets Agile",
+    "hook": "My data engineering background made me a better Scrum Master. Here is exactly how.",
+    "tags": ["DataDrivenAgile", "DataEngineering", "ScrumMaster"]
+  },
+  {
+    "id": 14,
+    "title": "Why Your Sprint Capacity Planning Is Probably Wrong",
+    "theme": "Capacity planning",
+    "hook": "We planned for 100% capacity every sprint. We delivered 60%. The math was never going to work.",
+    "tags": ["DataDrivenAgile", "SprintPlanning", "AgileDelivery"]
+  },
+  {
+    "id": 15,
+    "title": "SAFe PI Metrics: What to Measure Across Multiple Teams",
+    "theme": "SAFe metrics",
+    "hook": "One team's velocity means nothing at scale. Here is what actually matters in a PI.",
+    "tags": ["DataDrivenAgile", "SAFe", "EnterpriseAgility"]
+  },
+  {
+    "id": 16,
+    "title": "How I Built a Real-Time Agile Dashboard for Stakeholders",
+    "theme": "Stakeholder reporting",
+    "hook": "Stakeholders asked for weekly status reports. I gave them a live dashboard. They stopped asking.",
+    "tags": ["DataDrivenAgile", "StakeholderManagement", "DigitalTransformation"]
+  },
+  {
+    "id": 17,
+    "title": "Monte Carlo Simulations in Agile: Predicting Delivery Dates",
+    "theme": "Probabilistic forecasting",
+    "hook": "I stopped guessing delivery dates. I started running simulations. Stakeholders trusted us more.",
+    "tags": ["DataDrivenAgile", "AgileForecasting", "ScrumMaster"]
+  },
+  {
+    "id": 18,
+    "title": "The Hidden Cost of Multitasking — Shown in Data",
+    "theme": "WIP and multitasking",
+    "hook": "I showed a developer their context-switching data for one sprint. They never worked on 4 tasks at once again.",
+    "tags": ["DataDrivenAgile", "Kanban", "TeamCollaboration"]
+  },
+  {
+    "id": 19,
+    "title": "Using Cumulative Flow Diagrams to Spot Team Problems Early",
+    "theme": "Cumulative Flow Diagrams",
+    "hook": "A CFD tells you in one glance what 30 minutes of standup can't. Most teams have never seen one.",
+    "tags": ["DataDrivenAgile", "AgileMetrics", "ContinuousImprovement"]
+  },
+  {
+    "id": 20,
+    "title": "Why I Believe Every Scrum Master Should Learn Basic Data Skills",
+    "theme": "Future of Agile coaching",
+    "hook": "The next generation of Scrum Masters will be data literate. Are you building that skill now?",
+    "tags": ["DataDrivenAgile", "ScrumMaster", "ProfessionalGrowth"]
+  }
+]

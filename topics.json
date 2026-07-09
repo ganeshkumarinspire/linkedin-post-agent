@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "title": "Why Velocity Is a Vanity Metric",
+    "theme": "Agile misconceptions",
+    "hook": "Everyone celebrates high velocity. Nobody asks what it costs.",
+    "tags": ["AgileJourney", "ScrumMaster", "AgileMindset"]
+  },
+  {
+    "id": 2,
+    "title": "What Makes a Great Scrum Master (It's Not Facilitation)",
+    "theme": "Scrum Master role",
+    "hook": "I thought being a Scrum Master meant running great ceremonies. I was wrong.",
+    "tags": ["ScrumMaster", "AgileLeadership", "TeamCollaboration"]
+  },
+  {
+    "id": 3,
+    "title": "How I Helped a Team Go From Chaos to Predictable Delivery",
+    "theme": "Scrum Master impact",
+    "hook": "When I joined the team, nobody knew what they were delivering next sprint. 6 weeks later, everything changed.",
+    "tags": ["ScrumMaster", "AgileDelivery", "ContinuousImprovement"]
+  },
+  {
+    "id": 4,
+    "title": "The Difference Between a Scrum Master and a Project Manager",
+    "theme": "Role clarity",
+    "hook": "Recruiters still confuse these two roles. Let me clear it up once and for all.",
+    "tags": ["ScrumMaster", "ProjectManagement", "AgileMindset"]
+  },
+  {
+    "id": 5,
+    "title": "3 Signs Your Team Needs a Scrum Master Right Now",
+    "theme": "Value of Scrum Master",
+    "hook": "Most teams don't realize they need a Scrum Master — until they see what one actually does.",
+    "tags": ["ScrumMaster", "EnterpriseAgility", "Leadership"]
+  },
+  {
+    "id": 6,
+    "title": "How I Removed Blockers That Had Been Sitting for 3 Weeks",
+    "theme": "Impediment removal",
+    "hook": "The blocker wasn't technical. It never is.",
+    "tags": ["ScrumMaster", "AgileDelivery", "StakeholderManagement"]
+  },
+  {
+    "id": 7,
+    "title": "Working as a Scrum Master in France: What I've Learned",
+    "theme": "Agile in French companies",
+    "hook": "Agile in France is different. The culture, the hierarchy, the language — all shape how it lands.",
+    "tags": ["ScrumMaster", "France", "EnterpriseAgility"]
+  },
+  {
+    "id": 8,
+    "title": "Why I'm Actively Looking for My Next Scrum Master Role in Europe",
+    "theme": "Job search transparency",
+    "hook": "I'm not hiding it — I'm actively looking. Here's what I bring to my next team.",
+    "tags": ["OpenToWork", "ScrumMaster", "France"]
+  },
+  {
+    "id": 9,
+    "title": "How Psychological Safety Unlocked My Team's Performance",
+    "theme": "Team culture",
+    "hook": "The sprint velocity didn't improve when we added more stories. It improved when people stopped being afraid to speak up.",
+    "tags": ["ScrumMaster", "Leadership", "TeamCollaboration"]
+  },
+  {
+    "id": 10,
+    "title": "Retrospectives That Actually Change Team Behavior",
+    "theme": "Continuous improvement",
+    "hook": "Most retros end with a list. The best ones end with a commitment.",
+    "tags": ["ScrumMaster", "ContinuousImprovement", "AgileMindset"]
+  },
+  {
+    "id": 11,
+    "title": "What Hiring Managers Should Look for in a Scrum Master",
+    "theme": "Recruiter-facing content",
+    "hook": "A certified Scrum Master is not the same as an effective one. Here's what actually matters.",
+    "tags": ["ScrumMaster", "ProfessionalGrowth", "Leadership"]
+  },
+  {
+    "id": 12,
+    "title": "How I Coached a Team Through a Failed Sprint Without Losing Trust",
+    "theme": "Resilience and coaching",
+    "hook": "The sprint failed. The product owner was furious. Here's what I did next.",
+    "tags": ["ScrumMaster", "AgileDelivery", "ContinuousLearning"]
+  },
+  {
+    "id": 13,
+    "title": "Scaling Agile Across Multiple Teams: Lessons From the Field",
+    "theme": "Enterprise agility",
+    "hook": "One Scrum team is manageable. Four teams with dependencies? That's where real Agile skill shows.",
+    "tags": ["EnterpriseAgility", "ScrumMaster", "DigitalTransformation"]
+  },
+  {
+    "id": 14,
+    "title": "My Scrum Master Journey: From Data Engineer to Agile Practitioner",
+    "theme": "Personal story / credibility",
+    "hook": "I started in data engineering. Agile found me — and changed how I think about everything.",
+    "tags": ["LearningJourney", "ScrumMaster", "ProfessionalGrowth"]
+  },
+  {
+    "id": 15,
+    "title": "How to Get Stakeholder Buy-In for Agile in Traditional Organizations",
+    "theme": "Stakeholder management",
+    "hook": "The biggest resistance to Agile never comes from the team. It comes from above.",
+    "tags": ["StakeholderManagement", "EnterpriseAgility", "DigitalTransformation"]
+  },
+  {
+    "id": 16,
+    "title": "What I Look for in My Next Team as a Scrum Master",
+    "theme": "Job search / culture fit",
+    "hook": "I'm not just looking for any Scrum Master role. I'm looking for the right one.",
+    "tags": ["OpenToWork", "ScrumMaster", "France"]
+  },
+  {
+    "id": 17,
+    "title": "The Scrum Master Skill Nobody Talks About: Active Listening",
+    "theme": "Soft skills",
+    "hook": "I've seen Scrum Masters run perfect ceremonies and still lose their teams. The missing skill? Listening.",
+    "tags": ["ScrumMaster", "Leadership", "TeamCollaboration"]
+  },
+  {
+    "id": 18,
+    "title": "Agile Is Not a Process — It's a Mindset Shift",
+    "theme": "Agile philosophy",
+    "hook": "Every company says they do Agile. Very few actually think Agile.",
+    "tags": ["AgileMindset", "DigitalTransformation", "ContinuousLearning"]
+  },
+  {
+    "id": 19,
+    "title": "How I Built Trust With a Team That Had Never Had a Scrum Master",
+    "theme": "Onboarding and trust",
+    "hook": "Day 1: the team didn't understand why I was there. Day 30: they didn't want me to leave.",
+    "tags": ["ScrumMaster", "TeamCollaboration", "LearningJourney"]
+  },
+  {
+    "id": 20,
+    "title": "Why European Companies Are Investing in Scrum Masters Right Now",
+    "theme": "Market relevance",
+    "hook": "Digital transformation is accelerating across Europe. The demand for skilled Scrum Masters has never been higher.",
+    "tags": ["EnterpriseAgility", "DigitalTransformation", "France"]
+  }
+]

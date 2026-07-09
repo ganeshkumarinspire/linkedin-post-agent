@@ -16,6 +16,8 @@ on:
 jobs:
   post:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repo
@@ -58,3 +60,12 @@ jobs:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
         run: python agent_data_agile.py
+
+      - name: Commit report back to repo
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add post_reports.json || true
+          git diff --cached --quiet || git commit -m "Post report $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push || true

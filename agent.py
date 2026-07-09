@@ -14,6 +14,7 @@ load_dotenv()
 
 from content_generator import describe_image, generate_post, get_today_image
 from linkedin_client import publish
+from report_logger import log_report
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -82,7 +83,28 @@ def run_agent() -> None:
 
     # 3. Publish to LinkedIn (with image if available)
     logger.info("Publishing to LinkedIn...")
-    post_urn = publish(post_text, image_path=str(image_path) if image_path else None)
+    try:
+        post_urn = publish(post_text, image_path=str(image_path) if image_path else None)
+        log_report(
+            series="Lessons from My Agile Journey",
+            folder="Lessons_from_My_Agile_Journey",
+            image_file=image_path.name if image_path else None,
+            post_date=today_str,
+            json_post_matched=today_str in pre_written,
+            status="Success",
+        )
+        logger.info(f"Done! Post published: {post_urn}")
+    except Exception as e:
+        log_report(
+            series="Lessons from My Agile Journey",
+            folder="Lessons_from_My_Agile_Journey",
+            image_file=image_path.name if image_path else None,
+            post_date=today_str,
+            json_post_matched=today_str in pre_written,
+            status="Failed",
+            error=str(e),
+        )
+        raise
 
     # 4. Record progress
     progress["next_index"] = idx + 1

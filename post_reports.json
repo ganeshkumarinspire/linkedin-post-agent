@@ -248,5 +248,15 @@
     "status": "Success",
     "error": "",
     "series": "Data-Driven Agile"
+  },
+  {
+    "timestamp": "2026-07-17 06:01 UTC",
+    "date_posted": "2026-07-17",
+    "image_file": "2026-07-17.png",
+    "folder": "Lessons_from_My_Agile_Journey",
+    "json_post_verified": "Yes",
+    "status": "Success",
+    "error": "",
+    "series": "Lessons from My Agile Journey"
   }
 ]

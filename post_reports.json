@@ -518,5 +518,15 @@
     "status": "Skipped \u2014 no post scheduled for today",
     "error": "",
     "series": "Data-Driven Agile"
+  },
+  {
+    "timestamp": "2026-07-27 15:56 UTC",
+    "date_posted": "2026-07-27",
+    "image_file": "None",
+    "folder": "Data_Driven_Agile",
+    "json_post_verified": "No",
+    "status": "Skipped \u2014 no post scheduled for today",
+    "error": "",
+    "series": "Data-Driven Agile"
   }
 ]

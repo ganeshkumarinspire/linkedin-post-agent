@@ -538,5 +538,15 @@
     "status": "Skipped \u2014 no post scheduled for today",
     "error": "",
     "series": "Data-Driven Agile"
+  },
+  {
+    "timestamp": "2026-07-28 06:01 UTC",
+    "date_posted": "2026-07-28",
+    "image_file": "2026-07-28.png",
+    "folder": "Lessons_from_My_Agile_Journey",
+    "json_post_verified": "Yes",
+    "status": "Success",
+    "error": "",
+    "series": "Lessons from My Agile Journey"
   }
 ]

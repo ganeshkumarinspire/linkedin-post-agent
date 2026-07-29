@@ -1,11 +1,6 @@
 name: LinkedIn Auto Post
 
 on:
-  schedule:
-    # 8 AM Paris time = 6 AM UTC (summer CEST = UTC+2)
-    - cron: '0 6 * * 1-5'
-    # 12 PM Paris time = 10 AM UTC (summer CEST = UTC+2)
-    - cron: '0 10 * * 1-5'
   workflow_dispatch:
     inputs:
       series:

@@ -1108,5 +1108,15 @@
     "status": "Failed",
     "error": "401 Client Error: Unauthorized for url: https://api.linkedin.com/v2/assets?action=registerUpload",
     "series": "Lessons from My Agile Journey"
+  },
+  {
+    "timestamp": "2026-09-02 10:01 UTC",
+    "date_posted": "2026-09-02",
+    "image_file": "None",
+    "folder": "Data_Driven_Agile",
+    "json_post_verified": "No",
+    "status": "Skipped \u2014 no post scheduled for today",
+    "error": "",
+    "series": "Data-Driven Agile"
   }
 ]

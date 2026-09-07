@@ -1168,5 +1168,15 @@
     "status": "Failed",
     "error": "401 Client Error: Unauthorized for url: https://api.linkedin.com/v2/assets?action=registerUpload",
     "series": "Lessons from My Agile Journey"
+  },
+  {
+    "timestamp": "2026-09-07 10:01 UTC",
+    "date_posted": "2026-09-07",
+    "image_file": "2026-09-07.png",
+    "folder": "Agile_Reimagined_With_AI",
+    "json_post_verified": "Yes",
+    "status": "Failed",
+    "error": "401 Client Error: Unauthorized for url: https://api.linkedin.com/v2/assets?action=registerUpload",
+    "series": "Agile Reimagined With AI"
   }
 ]

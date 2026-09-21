@@ -1188,5 +1188,15 @@
     "status": "Success",
     "error": "",
     "series": "Lessons from My Agile Journey"
+  },
+  {
+    "timestamp": "2026-09-21 14:10 UTC",
+    "date_posted": "2026-09-21",
+    "image_file": "2026-09-21.png",
+    "folder": "Agile_Reimagined_With_AI",
+    "json_post_verified": "Yes",
+    "status": "Success",
+    "error": "",
+    "series": "Agile Reimagined With AI"
   }
 ]
